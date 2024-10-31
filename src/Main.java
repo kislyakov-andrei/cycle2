@@ -52,10 +52,24 @@ public class Main {
         term=0;
         depositDream=12_000_000;
         deposit=sumIn;
-        while (deposit<=depositDream){
+        while (deposit<=depositDream) {
             term++;
-            deposit=deposit+deposit/100*percent;
-            System.out.println(term+"-й месяц, сумма накоплений "+deposit);
+            deposit = deposit + deposit / 100 * percent;
+            if (term % 6 == 0) {
+                System.out.println(term + "-й месяц, сумма накоплений " + deposit);
+            }
+        }
+// Task 6
+        System.out.println("Task 6");
+        term=9;
+        deposit=sumIn;
+        int monthQuantity=12*term;
+        for (i=1;i<=monthQuantity;i++){
+            deposit=deposit + deposit / 100 * percent;
+            if (i % 6 == 0) {
+                System.out.println(i + "-й месяц, сумма накоплений " + deposit);}
+        }
+
 
 
 
